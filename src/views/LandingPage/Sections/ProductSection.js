@@ -31,17 +31,23 @@ export default function ProductSection() {
       </GridContainer>
       <div>
         <GridContainer>
-          <GridItem xs={12} sm={12} md={4}>
-            <span className={classes.description}>Patient Satisfaction</span>
-            <div className={classes.product} style={{backgroundImage: "url(" + require("assets/img/product1.png") + ")"}}/>
+          <GridItem xs={12} sm={12} md={4} className={classes.productGrid}>
+            <div className={classes.frame}>
+              <span className={classes.description}>Patient Satisfaction</span>
+              <div className={classes.product} style={{backgroundImage: "url(" + require("assets/img/product1.png") + ")"}}/>
+            </div>
           </GridItem>
-          <GridItem xs={12} sm={12} md={4}>
-            <span className={classes.description}>Align Expectations</span>
-            <div className={classes.product} style={{backgroundImage: "url(" + require("assets/img/product2.png") + ")"}}/>
+          <GridItem xs={12} sm={12} md={4} className={classes.productGrid}>
+            <div className={classes.frame}>
+              <span className={classes.description}>Align Expectations</span>
+              <div className={classes.product} style={{backgroundImage: "url(" + require("assets/img/product2.png") + ")"}}/>
+            </div>
           </GridItem>
-          <GridItem xs={12} sm={12} md={4}>
-            <span className={classes.description}>Personalized Treatment</span>
-            <div className={classes.product} style={{backgroundImage: "url(" + require("assets/img/product3.png") + ")"}}/>
+          <GridItem xs={12} sm={12} md={4} className={classes.productGrid}>
+            <div className={classes.frame}>
+              <span className={classes.description}>Personalized Treatment</span>
+              <div className={classes.product} style={{backgroundImage: "url(" + require("assets/img/product3.png") + ")"}}/>
+            </div>
           </GridItem>
         </GridContainer>
       </div>

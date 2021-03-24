@@ -11,8 +11,6 @@ const productStyle = {
     position: "relative",
     "&:before": {
       background: "rgba(255, 255, 255, 0.5)",
-    },
-    "&:after,&:before": {
       position: "absolute",
       width: "100%",
       height: "100%",
@@ -44,11 +42,15 @@ const productStyle = {
     backgroundSize: 200,
     backgroundRepeat: "no-repeat",
     backgroundPositionX: "center",
-    "&:before": {
-      width: "100%",
-      height: "100%",
-      content: "''"
-    }
+  },
+  productGrid: {
+    display: "flex",
+    justifyContent: "center"
+  },
+  frame: {
+    background: "rgba(255, 255, 255, 0.5)",
+    width: "300px",
+    height: "300px",
   }
 };
 

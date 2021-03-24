@@ -6,6 +6,8 @@ const workStyle = {
   },
   title: {
     ...title,
+    backgroundColor: "rgb(248, 160, 255)",
+    lineHeight: "115px",
     color: "rgb(31, 31, 100)",
     marginBottom: "50px",
     marginTop: "30px",
@@ -19,6 +21,14 @@ const workStyle = {
     fontSize: "1.5em",
     lineHeight: "1.7em",
     fontWeight: 500
+  },
+  address: {
+    color: "rgb(31, 31, 100)",
+    fontSize: "1.2em",
+    fontWeight: 500,
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center"
   },
   textCenter: {
     textAlign: "center"
