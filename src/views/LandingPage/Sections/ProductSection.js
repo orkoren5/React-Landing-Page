@@ -12,13 +12,14 @@ import GridItem from "components/Grid/GridItem.js";
 import InfoArea from "components/InfoArea/InfoArea.js";
 
 import styles from "assets/jss/material-kit-react/views/landingPageSections/productStyle.js";
+import classNames from "classnames";
 
 const useStyles = makeStyles(styles);
 
 export default function ProductSection() {
   const classes = useStyles();
   return (
-    <div className={classes.section} id="product-section">
+    <div style={{backgroundImage: "url(" + require("assets/img/product-bg.png") + ")"}} className={classNames(classes.productSection, classes.section)} id="product-section">
       <GridContainer justify="center" className={classes.titleContainer}>
         <GridItem xs={12} sm={12} md={8}>
           <h2 className={classes.title}>EntityMed{"'"}s Services</h2>

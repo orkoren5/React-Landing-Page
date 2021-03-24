@@ -15,9 +15,16 @@ const landingPageStyle = {
     textDecoration: "none"
   },
   subtitle: {
-    fontSize: "1.313rem",
-    maxWidth: "500px",
-    color: "rgb(8,8,8)"
+    fontSize: "1.5rem",
+    fontWeight: 500,
+    lineHeight: "1.8em",
+    color: "rgb(8,8,8)",
+    textAlign: "center"
+  },
+  titleContainer: {
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center"
   },
   main: {
     background: "#FFFFFF",
@@ -36,6 +43,10 @@ const landingPageStyle = {
       color: "initial",
       borderRadius: 50
     }
+  },
+  faceImg: {
+    position: "absolute",
+    height: 420
   }
 };
 

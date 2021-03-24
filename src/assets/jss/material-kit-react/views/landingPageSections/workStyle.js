@@ -15,7 +15,10 @@ const workStyle = {
   },
   description: {
     color: "rgb(31, 31, 100)",
-    textAlign: "center"
+    textAlign: "center",
+    fontSize: "1.5em",
+    lineHeight: "1.7em",
+    fontWeight: 500
   },
   textCenter: {
     textAlign: "center"
@@ -30,6 +33,9 @@ const workStyle = {
       color: "initial",
       borderRadius: 50
     }
+  },
+  map: {
+    width: "100%"
   }
 };
 

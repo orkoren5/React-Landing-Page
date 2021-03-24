@@ -11,6 +11,7 @@ import CustomInput from "components/CustomInput/CustomInput.js";
 import Button from "components/CustomButtons/Button.js";
 
 import styles from "assets/jss/material-kit-react/views/landingPageSections/workStyle.js";
+import image from "assets/img/map.png";
 
 const useStyles = makeStyles(styles);
 
@@ -28,8 +29,8 @@ export default function WorkSection() {
             <br/>
             <b>Leave your information below and we will contact you</b>
           </h4>
-          <form>
-            <GridContainer>
+          <GridContainer xs={12} sm={12} md={12}>
+            <GridItem xs={12} sm={12} md={8}>
               <GridItem xs={12} sm={12} md={12}>
                 <CustomInput
                   labelText="Full Name"
@@ -63,8 +64,11 @@ export default function WorkSection() {
               <GridItem xs={12} sm={12} md={4}>
                 <Button className={classes.pink} color="simple$pink">Send Message</Button>
               </GridItem>
-            </GridContainer>
-          </form>
+            </GridItem>
+            <GridItem xs={12} sm={12} md={4}>
+              <img src={image} className={classes.map}/>
+            </GridItem>
+          </GridContainer>
         </GridItem>
       </GridContainer>
     </div>

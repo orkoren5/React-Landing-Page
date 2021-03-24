@@ -20,6 +20,7 @@ import ProductSection from "./Sections/ProductSection.js";
 import TeamSection from "./Sections/TeamSection.js";
 import WorkSection from "./Sections/WorkSection.js";
 import EntityMedLinks from "../../components/Header/EntitiyMedLinks";
+import { Hidden } from "@material-ui/core";
 
 const dashboardRoutes = [];
 
@@ -37,7 +38,7 @@ export default function LandingPage(props) {
         rightLinks={<EntityMedLinks />}
         fixed
         changeColorOnScroll={{
-          height: 400,
+          height: 200,
           color: "white"
         }}
         {...rest}
@@ -45,7 +46,7 @@ export default function LandingPage(props) {
       <Parallax filter image={require("assets/img/landing-bg.png")}>
         <div className={classes.container}>
           <GridContainer>
-            <GridItem xs={12} sm={12} md={6}>
+            <GridItem xs={12} sm={12} md={8} className={classes.titleContainer}>
               <h1 className={classes.title}>When Beauty Meets AI</h1>
               <h4 className={classes.subtitle}>
                 EntityMed harnesses the power of artificial intelligence to simulate the outcome of aesthetic procedures
@@ -59,11 +60,16 @@ export default function LandingPage(props) {
                 Try it now
               </Button>
             </GridItem>
+            <Hidden mdDown implementation="js">
+              <GridItem xs={0} sm={0} md={4}>
+                <img className={classes.faceImg} src={require("assets/img/face2.png")}/>
+              </GridItem>
+            </Hidden>
           </GridContainer>
         </div>
       </Parallax>
       <div className={classNames(classes.main, classes.mainRaised)}>
-        <div className={classes.container}>
+        <div>
           <ProductSection />
           <WorkSection />
         </div>
