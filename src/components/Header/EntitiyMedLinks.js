@@ -47,7 +47,7 @@ export default function EntityMedLinks(props) {
           href="#contact-section"
           color="transparent"
           className={classes.navLink}
-        >Contacts
+        >Contact US
         </Button>
       </ListItem>
     </List>

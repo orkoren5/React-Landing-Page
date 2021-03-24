@@ -12,13 +12,14 @@ import GridItem from "components/Grid/GridItem.js";
 import InfoArea from "components/InfoArea/InfoArea.js";
 
 import styles from "assets/jss/material-kit-react/views/landingPageSections/productStyle.js";
+import classNames from "classnames";
 
 const useStyles = makeStyles(styles);
 
 export default function ProductSection() {
   const classes = useStyles();
   return (
-    <div className={classes.section} id="product-section">
+    <div style={{backgroundImage: "url(" + require("assets/img/product-bg.png") + ")"}} className={classNames(classes.productSection, classes.section)} id="product-section">
       <GridContainer justify="center" className={classes.titleContainer}>
         <GridItem xs={12} sm={12} md={8}>
           <h2 className={classes.title}>EntityMed{"'"}s Services</h2>
@@ -30,17 +31,23 @@ export default function ProductSection() {
       </GridContainer>
       <div>
         <GridContainer>
-          <GridItem xs={12} sm={12} md={4}>
-            <span className={classes.description}>Patient Satisfaction</span>
-            <div className={classes.product} style={{backgroundImage: "url(" + require("assets/img/product1.png") + ")"}}/>
+          <GridItem xs={12} sm={12} md={4} className={classes.productGrid}>
+            <div className={classes.frame}>
+              <span className={classes.description}>Patient Satisfaction</span>
+              <div className={classes.product} style={{backgroundImage: "url(" + require("assets/img/product1.png") + ")"}}/>
+            </div>
           </GridItem>
-          <GridItem xs={12} sm={12} md={4}>
-            <span className={classes.description}>Align Expectations</span>
-            <div className={classes.product} style={{backgroundImage: "url(" + require("assets/img/product2.png") + ")"}}/>
+          <GridItem xs={12} sm={12} md={4} className={classes.productGrid}>
+            <div className={classes.frame}>
+              <span className={classes.description}>Align Expectations</span>
+              <div className={classes.product} style={{backgroundImage: "url(" + require("assets/img/product2.png") + ")"}}/>
+            </div>
           </GridItem>
-          <GridItem xs={12} sm={12} md={4}>
-            <span className={classes.description}>Personalized Treatment</span>
-            <div className={classes.product} style={{backgroundImage: "url(" + require("assets/img/product3.png") + ")"}}/>
+          <GridItem xs={12} sm={12} md={4} className={classes.productGrid}>
+            <div className={classes.frame}>
+              <span className={classes.description}>Personalized Treatment</span>
+              <div className={classes.product} style={{backgroundImage: "url(" + require("assets/img/product3.png") + ")"}}/>
+            </div>
           </GridItem>
         </GridContainer>
       </div>

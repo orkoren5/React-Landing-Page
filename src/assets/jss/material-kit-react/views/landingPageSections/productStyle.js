@@ -5,6 +5,21 @@ const productStyle = {
     padding: "70px 0",
     textAlign: "center"
   },
+  productSection: {
+    backgroundRepeat: "no-repeat",
+    backgroundSize: "cover",
+    position: "relative",
+    "&:before": {
+      background: "rgba(255, 255, 255, 0.5)",
+      position: "absolute",
+      width: "100%",
+      height: "100%",
+      display: "block",
+      left: "0",
+      top: "0",
+      content: "''"
+    }
+  },
   title: {
     ...title,
     marginBottom: "1rem",
@@ -17,14 +32,25 @@ const productStyle = {
   },
   description: {
     color: "rgb(31, 31, 100)",
-    fontSize: "1.4em"
+    fontSize: "1.5em",
+    lineHeight: "1.7em",
+    fontWeight: 500
   },
   product: {
     width: "100%",
     height: 200,
     backgroundSize: 200,
     backgroundRepeat: "no-repeat",
-    backgroundPositionX: "center"
+    backgroundPositionX: "center",
+  },
+  productGrid: {
+    display: "flex",
+    justifyContent: "center"
+  },
+  frame: {
+    background: "rgba(255, 255, 255, 0.5)",
+    width: "300px",
+    height: "300px",
   }
 };
 

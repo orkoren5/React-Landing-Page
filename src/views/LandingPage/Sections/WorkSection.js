@@ -11,6 +11,7 @@ import CustomInput from "components/CustomInput/CustomInput.js";
 import Button from "components/CustomButtons/Button.js";
 
 import styles from "assets/jss/material-kit-react/views/landingPageSections/workStyle.js";
+import image from "assets/img/map.png";
 
 const useStyles = makeStyles(styles);
 
@@ -19,8 +20,10 @@ export default function WorkSection() {
   return (
     <div className={classes.section} id="contact-section">
       <GridContainer justify="center">
-        <GridItem cs={12} sm={12} md={8}>
+        <GridItem cs={12} sm={12} md={12}>
           <h2 className={classes.title}>Get In Touch</h2>
+        </GridItem>
+        <GridItem cs={12} sm={12} md={8}>
           <h4 className={classes.description}>
             Want to learn more about EntityMeds platform and provide a more personalized aesthetic treatment?
             <br/>
@@ -28,8 +31,8 @@ export default function WorkSection() {
             <br/>
             <b>Leave your information below and we will contact you</b>
           </h4>
-          <form>
-            <GridContainer>
+          <GridContainer xs={12} sm={12} md={12}>
+            <GridItem xs={12} sm={12} md={8}>
               <GridItem xs={12} sm={12} md={12}>
                 <CustomInput
                   labelText="Full Name"
@@ -57,14 +60,23 @@ export default function WorkSection() {
                 }}
                 inputProps={{
                   multiline: true,
-                  rows: 5
+                  rows: 9
                 }}
               />
-              <GridItem xs={12} sm={12} md={4}>
+              <GridItem container justify="flex-end" xs={12} sm={12} md={12}>
                 <Button className={classes.pink} color="simple$pink">Send Message</Button>
               </GridItem>
-            </GridContainer>
-          </form>
+            </GridItem>
+            <GridItem xs={12} sm={12} md={4}>
+              <img src={image} className={classes.map}/>
+              <span className={classes.address}>
+                <b>Main office</b>
+                <span>4 Hahoshlim St., Herzeliya, Israel</span>
+                <span>+(972)52-5588040</span>
+                <span>contact@entitymed.com</span>
+              </span>
+            </GridItem>
+          </GridContainer>
         </GridItem>
       </GridContainer>
     </div>
