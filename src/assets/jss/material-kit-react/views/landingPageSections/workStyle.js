@@ -13,7 +13,8 @@ const workStyle = {
     marginTop: "30px",
     minHeight: "32px",
     textDecoration: "none",
-    textAlign: "center"
+    textAlign: "center",
+    width: "100%"
   },
   description: {
     color: "rgb(31, 31, 100)",
@@ -28,7 +29,8 @@ const workStyle = {
     fontWeight: 500,
     display: "flex",
     flexDirection: "column",
-    alignItems: "center"
+    alignItems: "center",
+    textAlign: "center"
   },
   textCenter: {
     textAlign: "center"
@@ -41,11 +43,14 @@ const workStyle = {
     "&,&:focus,&:hover,&:visited": {
       backgroundColor: "rgb(248, 160, 255)",
       color: "initial",
-      borderRadius: 50
+      borderRadius: 50,
+      height: 50
     }
   },
   map: {
-    width: "100%"
+    border: 0,
+    width: "100%",
+    minHeight: "100%"
   }
 };
 
